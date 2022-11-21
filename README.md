@@ -19,7 +19,7 @@ See detailed instructions from wrf-python documentation:
 
 https://wrf-python.readthedocs.io/en/latest/installation.html
 
-On HPC Linux environments, the following lines works with python version 3.5.2 
+On HPC Linux environments, the following lines works with python version 3.5.2. Any comments or suggestions on issues with installation are welcomed. 
 
     cd ../fortran/build_help
 
