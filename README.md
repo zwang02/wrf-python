@@ -2,7 +2,13 @@ wrf-python-adapted
 ==============
 
 Codes adapted from NCAR/wrf-python repository. 
+
 https://github.com/NCAR/wrf-python 
+
+In the adapted version, I have implemented the surfaced-based and most-unstable CAPE calculation into wrf module. The functions can be called in a similar way as wrf.cape_2d, but with wrf.sbcape_2d and wrf.mucape_2d respectively. The input and output follow the same convention as described in cape_2d documentation. For details, see below: 
+
+https://wrf-python.readthedocs.io/en/latest/user_api/generated/wrf.cape_2d.html?highlight=cape
+
 
 
 
