@@ -15,30 +15,30 @@ https://wrf-python.readthedocs.io/en/latest/user_api/generated/wrf.cape_2d.html?
 Installation
 ----------------------------
 
-    See detailed instructions from wrf-python documentation: 
-    https://wrf-python.readthedocs.io/en/latest/installation.html
-    
-    On HPC Linux environments, the following lines works with python version 3.5.2 
-    
-cd ../fortran/build_help
+See detailed instructions from wrf-python documentation: 
+https://wrf-python.readthedocs.io/en/latest/installation.html
 
-gfortran -o sizes -fopenmp omp_sizes.f90
+On HPC Linux environments, the following lines works with python version 3.5.2 
 
-python sub_sizes.py
+    cd ../fortran/build_help
 
-cd ..
+    gfortran -o sizes -fopenmp omp_sizes.f90
 
-gfortran -E ompgen.F90 -fopenmp -cpp -o omp.f90
+    python sub_sizes.py
 
-f2py *.f90 -m _wrffortran -h wrffortran.pyf --overwrite-signature
+    cd ..
 
-cd ..
+    gfortran -E ompgen.F90 -fopenmp -cpp -o omp.f90
 
-python setup.py clean --all
+    f2py *.f90 -m _wrffortran -h wrffortran.pyf --overwrite-signature
 
-python setup.py config_fc --f90flags="-mtune=generic -fopenmp" build_ext --libraries="gomp" build
+    cd ..
 
-pip install .
+    python setup.py clean --all
+
+    python setup.py config_fc --f90flags="-mtune=generic -fopenmp" build_ext --libraries="gomp" build
+
+    pip install .
 
 
 Documentation
