@@ -9,7 +9,7 @@ In the adapted version, I have implemented the surfaced-based and most-unstable 
 
 I also implemented LNB output for all cape_2d functions, taking the height value corresponding to the highest level with positive buoyancy. 
 
-For details, see below: 
+For details of the original cape_2d function, see below: 
 
 https://wrf-python.readthedocs.io/en/latest/user_api/generated/wrf.cape_2d.html
 
