@@ -5,7 +5,11 @@ Codes adapted from NCAR/wrf-python repository.
 
 https://github.com/NCAR/wrf-python 
 
-In the adapted version, I have implemented the surfaced-based and most-unstable CAPE calculation into wrf module. The functions can be called in a similar way as wrf.cape_2d, but with wrf.sbcape_2d and wrf.mucape_2d respectively. The input and output follow the same convention as described in cape_2d documentation. For details, see below: 
+In the adapted version, I have implemented the surfaced-based and most-unstable CAPE calculation into wrf module. The functions can be called in a similar way as wrf.cape_2d, but with wrf.sbcape_2d and wrf.mucape_2d respectively. The input and output follow the same convention as described in cape_2d documentation. 
+
+I also implemented LNB output for all cape_2d functions, taking the height value corresponding to the highest level with positive buoyancy. 
+
+For details, see below: 
 
 https://wrf-python.readthedocs.io/en/latest/user_api/generated/wrf.cape_2d.html
 
@@ -46,6 +50,12 @@ Documentation
 ----------------------------------
 
 http://wrf-python.rtfd.org
+
+
+Known Issues
+----------------------------------
+
+The level of free convection (LFC) calculation outputs the top of atmosphere height if there's no LFC found in a profile. The users will need to manually set the corresponding value to NaN value to avoid confusion in the following analysis. I am working to resolve such problems by implementing masked array output as in original cape_2d functions. 
 
 
 Citation
